@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    color: white;
+    font-family: 'poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 23px;
+}
+
+nav ul li a:hover {
+
+    color: rgb(126, 87, 255);
+    font-size: 1.04rem;
+}
+
+.left {
+    font-size: 1.5rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 23px 0;
+    margin: 50px 0;
+
+}
+
+.firstSection>div {
+    width: 30%;
+
+}
+
+.leftSection {
+
+    font-size: 3rem;
+    margin: 70px 0;
+
+    .rightSection img {
+        width: 80%;
+        margin: 70px 0;
+
+
+    }
+
+    .purple {
+        color: rgb(153, 51, 249);
+    }
+
+    #element {
+        color: rgb(44, 145, 217);
+    }
+
+}
+
+
+.firstSection {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+video {
+    width: 130%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+
+#about {
+    margin-top: 100px;  /* Adjust as needed */
+    
+}
+
+.section-wrapper {
+    overflow: auto;
+}
+
+/* Slider container styles */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 700px; /* Adjust height as needed */
+}
+
+/* Individual slide styles */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Slide content styles */
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+/* Smooth fade-in transition */
+.slide.active {
+    opacity: 1;
+}
+
+/* Add any additional styles for the button if needed */
+#product {
+    text-align: center;
+}
+
+#product img {
+    display: block;
+    margin: 0 auto 20px; /* Centers the image and adds a gap below it */
+}
+
+#product button {
+    background-color: #774efff5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#product button:hover {
+    background-color: #248eff;
+}
+
+
+#login {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+
+.login-form {
+    background-color:rgb(12, 32, 66);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form label,
+.login-form input,
+.login-form button {
+    width: 100%;
+    max-width: 200px; /* Adjust as needed */
+}
+
+.login-form input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    background-color: #1783ee;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #eedf09;
+}
+
+.login-form p {
+    margin-top: 20px;
+}
+
+  
+  
+  
+
+#contact {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: rgb(10, 10, 10);
+    padding: 50px 0;
+    text-align: center;
+}
+#contact h2 {
+    margin-bottom: 30px;
+}
+.social-icons img {
+    width: 50px; /* Adjust size as needed */
+    margin: 0 10px; /* Adjust spacing between icons */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+.social-icons img:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+.help-section {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+#customer-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.review {
+    margin: 20px 20px;
+}
+
+.hexagon {
+    position: relative;
+    width: 350px; /* Adjust hexagon width */
+    height: 400px; /* Adjust hexagon height */
+    background-color: transparent;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    border: 2px solid rgb(121, 25, 255); /* Add border with specified color */
+    overflow: hidden; /* Ensure border is not cut off */
+    transition: background-color 0.3s ease;
+}
+
+.hexagon:before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Adjust position to cover border */
+    right: -3px; /* Adjust position to cover border */
+    bottom: -3px; /* Adjust position to cover border */
+    left: -3px; /* Adjust position to cover border */
+    border: 2px solid transparent; /* Match border width */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon:hover {
+    background-color: rgb(121, 25, 255); /* Change color on hover */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+.content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fffdfd;
+}
+
+.content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff7f7;
+}
+
+
+
