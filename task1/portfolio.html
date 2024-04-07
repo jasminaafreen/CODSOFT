@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jasmin - Devevloper Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(13, 13, 103);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            margin: 0 23px;
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(126, 87, 255);
+            font-size: 1.04rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 23px 0;
+            margin: 50px 0;
+
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+
+            font-size: 3rem;
+            margin: 70px 0;
+
+            .rightSection img {
+                width: 80%;
+                margin: 70px 0;
+
+
+            }
+
+            .purple {
+                color: rgb(153, 51, 249);
+            }
+
+            #element {
+                color: rgb(44, 145, 217);
+            }
+
+        }
+
+        .skill-article:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-article:hover img {
+            opacity: 1;
+
+        }
+
+        #skills {
+            text-align: center;
+            /* Add margin-bottom to create space below the skills section */
+            margin-bottom: 50px;
+            /* Adjust this value as needed */
+        }
+
+        .certificates-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 40px;
+        }
+
+        .certificate {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .certificate.active {
+            display: block;
+        }
+
+        .arrow {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .arrow:hover {
+            color: blue;
+        }
+
+        /* Style for Projects Section */
+        #projects {
+            overflow: hidden;
+            /* Clear floats */
+        }
+
+        /* Style for Project Container */
+        .project {
+            width: 45%;
+            /* Adjust width as needed */
+            float: left;
+            /* Floats elements to the left */
+            margin-right: 5%;
+            /* Creates space between projects */
+            margin-bottom: 50px;
+            /* Adjust margin bottom as needed */
+            margin-top: 50px;
+            padding: 20px;
+
+            border: 1px solid #ccc;
+        }
+
+        /* Clearfix to prevent layout issues */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Style for projects */
+        .project {
+            margin-bottom: 40px;
+            /* Add a suitable amount of gap */
+        }
+
+        .project img {
+            max-width: 50%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        /* Style for project titles */
+        .project h3 {
+            margin-bottom: 30px;
+        }
+
+        /* Style for project descriptions */
+        .project p {
+            margin-bottom: 30px;
+        }
+
+        #resume {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 600px;
+            margin-bottom: 50px;
+            clear: both;
+            /* Clear any floating elements */
+        }
+
+        .resume-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(44, 145, 217);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-button:hover {
+            background-color: #1e88e5;
+            /* Darker shade of blue on hover */
+        }
+
+        #contact {
+            margin: 50px auto;
+            max-width: 600px;
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            color: rgb(44, 145, 217);
+        }
+
+        .contact-info-item {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info-item img {
+            width: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .contact-info-item a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Jasmin's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact me at </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi my name is <span class="purple"> Jasmin </span>
+                <div>I am a passionate</div>
+                <span id="element"></span>
+
+            </div>
+            <div class="rightSection">
+                <img src="jasdev.png" alt="" width="300" height="400">
+            </div>
+        </section>
+
+
+        <section id="about" style="display: flex; flex-wrap: wrap;text-align: center;">
+            <h1 style="text-align: center;"><span>A</span>BOUT</h1>
+            <div class="container about-container">
+                <p>Passionate web developer fueled by a thirst for knowledge and a commitment to constant growth.
+                    As a college student deeply immersed in the world of web development,
+                    I approach every project with enthusiasm and a hunger to learn.
+                    From mastering new programming languages to exploring cutting-edge frameworks,
+                    I thrive on the challenge of pushing my boundaries. With a disciplined approach to learning,
+                    I eagerly soak up information and apply it to create innovative solutions.
+                    Each line of code is an opportunity to expand my skills and deepen my understanding of this dynamic
+                    field</p>
+            </div>
+            <center>
+                <div class="about-content" style="display: flex; flex-wrap: wrap;">
+                    <article class="about-article">
+                        <img src="wemen.png" alt="" width="100" height="100">
+                        <h5>FULL NAME</h5>
+                        <p>Syed Jasmin Aafreen</p>
+                    </article>
+
+        </section>
+        </center>
+
+        <section id="skills" style="text-align: center;">
+            <h1 style=" color: rgb(44, 145, 217);"><span>M</span>y Skills</h1>
+            <br>
+            <br>
+            <div class="container skills-container" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <article class="skill-article"
+                    style="position: relative; width: 200px; height: 200px; background-color: #f0f0f0; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <img src="htmllog1.png" alt="HTML Image"
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h4 style="margin-bottom: 0;color: black;">HTML</h4>
+                </article>
+
+                <article class="skill-article"
+                    style="position: relative; width: 200px; height: 200px; background-color: #f0f0f0; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <img src="csslogo.png" alt=""
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h4 style="margin-bottom: 0;color: black;">CSS</h4>
+                </article>
+                </article>
+
+                <article class="skill-article"
+                    style="position: relative; width: 200px; height: 200px; background-color: #f0f0f0; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <img src="javascript.png" alt=""
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h4 style="margin-bottom: 0;color: black;">JAVASCRIPT</h4>
+                </article>
+
+                <article class="skill-article"
+                    style="position: relative; width: 200px; height: 200px; background-color: #f0f0f0; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <img src="clang.png" alt=""
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h4 style="margin-bottom: 0;color: black;">C</h4>
+                </article>
+
+                <article class="skill-article"
+                    style="position: relative; width: 200px; height: 200px; background-color: #f0f0f0; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <img src="java.png" alt=""
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h4 style="margin-bottom: 0;color:black ;">JAVA</h4>
+                </article>
+                <article class="skill-article"
+                    style="position: relative; width: 200px; height: 200px; background-color: #f0f0f0; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+                    <img src="python.png" alt=""
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <h4 style="margin-bottom: 0;color: black;">PYTHON</h4>
+                </article>
+                <br>
+                <br>
+
+                <div class="certificates-container">
+                    <img src="iotcer.jpg.jpg" alt="Certificate 1" class="certificate active">
+                    <img src="infoja.png" alt="Certificate 2" class="certificate">
+                    <img src="ml.png" alt="Certificate 3" class="certificate">
+                    <img src="jntu.png" alt="Certificate 4" class="certificate">
+                    <!-- Add more images for additional certificates -->
+
+                    <div class="arrows">
+                        <span class="arrow prev" onclick="changeCertificate(-1)">&#10094;</span>
+                        <span class="arrow next" onclick="changeCertificate(1)">&#10095;</span>
+                    </div>
+                </div>
+
+                <script>
+                    let currentIndex = 0;
+                    const certificates = document.querySelectorAll('.certificate');
+
+                    function changeCertificate(direction) {
+                        currentIndex += direction;
+                        if (currentIndex < 0) {
+                            currentIndex = certificates.length - 1;
+                        }
+                        if (currentIndex >= certificates.length) {
+                            currentIndex = 0;
+                        }
+
+                        certificates.forEach((certificate, index) => {
+                            if (index === currentIndex) {
+                                certificate.classList.add('active');
+                            } else {
+                                certificate.classList.remove('active');
+                            }
+                        });
+                    }
+                </script>
+
+                <!-- Projects Section -->
+                <section id="projects">
+                    <h2 style="color: rgb(44, 145, 217);">Projects</h2>
+                    <div class="project">
+                        <img src="proj1.jpg" alt="Project 1">
+                        <h3>Temperture humidity tracker</h3>
+                        <p>It keeps track of the humidity and temperature ina room ,with th help of dthsensors </p>
+                    </div>
+                    <div class="project" style="float: right;"> <!-- Added inline style for Project 2 -->
+                        <img src="proj2light.jpg" alt="Project 2">
+                        <h3>light sensor </h3>
+                        <p>light sensors that are turne don if the temperature increases after certain extent </p>
+                    </div>
+                    <div class="project">
+                        <img src="form1.jpg" alt="Project 3" style="display: inline-block; width: 45%;">
+                        <img src="form2.jpg.png" alt="Project 3" style="display: inline-block; width: 45%;">
+                        <h3>Registration form</h3>
+                        <p>designing registration forms using django frame work</p>
+                    </div>
+
+                    <div class="clearfix"></div> <!-- Added clearfix to clear floats -->
+                    <!-- Add more projects as needed -->
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <div class="contact-info-item">
+
+                        <article class="contact" style="flex: 0 0 50%; max-width: 50%;">
+                            <img src="email.png" alt="">
+                            <h5>EMAIL</h5>
+                            <p>jasminaafreen7786@gmail.com </p>
+                            <a href="jasminaafreen7786@gmail.com "></a>
+
+
+                        </article>
+                        <article class="contact" style="flex: 0 0 50%; max-width: 50%;">
+                            <img src="linkin.png" alt="">
+                            <h5>Linkedin</h5>
+                            <p>https://www.linkedin.com/in/syed-jasmin-aafreen-4b9b3027a</p>
+                            <a href="https://www.linkedin.com/in/syed-jasmin-aafreen-4b9b3027a">link is here </a>
+
+                        </article>
+                        <article class="contact" style="flex: 0 0 50%; max-width: 50%;">
+                            <img src="github-logo.png" alt="">
+                            <h5>github</h5>
+                            <p>https://github.com/jasminaafreen</p>
+                            <a href="https://github.com/jasminaafreen">link is here</a>
+                        </article>
+                        <article class="about-article" style="flex: 0 0 50%; max-width: 50%;">
+                            <img src="contact.png" alt="">
+                            <h5>PHONE </h5>
+                            <p>+918778944379</p>
+                        </article>
+                    </div>
+
+                    <br>
+                    <br>
+                    <!-- Resume Section -->
+                    <section id="resume">
+                        <h2 style="color: rgb(44, 145, 217);">Resume</h2>
+                        <p>Download my resume in PDF format:</p>
+                        <a href="my first resume.pdf" download="jasmin_resume.pdf" class="resume-button">Download
+                            Resume</a>
+                    </section>
+
+
+                    <!-- Footer Section -->
+                    <footer>
+                        <p>&copy; 2024 jasminaafreen. All rights reserved.</p>
+                        <nav>
+                            <a href="#" style="color: white;">Home</a>
+                            <a href="#" style="color: white;">About</a>
+                            <a href="#contact" style="color: white;">Contact</a>
+                        </nav>
+                    </footer>
+
+
+            </div>
+        </section>
+
+
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Story Teller', 'Web designer'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
