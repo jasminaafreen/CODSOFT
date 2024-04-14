@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="utils.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1 class="text-center" style="color: white ; background-color: #8070e8;"> Web Calculator </h1>
+    <div class="container flex flex-col items-center mx-auto">
+        <div class="calculator">
+            <div class="row">  
+                <input class="input" type="text"/>
+            </div>
+            <div class="row">
+                <button class="button">C</button>
+                <button class="button">%</button>
+                <button class="button">M+</button>
+                <button class="button">M-</button>
+            </div>
+            <div class="row">
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button">*</button>
+            </div>
+            <div class="row">
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
+                <button class="button">/</button>
+            </div>
+            <div class="row">
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">+</button>
+            </div>
+            <div class="row">
+                <button class="button">0</button>
+                <button class="button">.</button>
+                <button class="button">=</button>
+                <button class="button">-</button>
+            </div>
+        </div>
+        <div class="note-section">
+            <h2 style="text-align: center; color:white;">Take Notes</h2>
+            <textarea id="note" rows="10" cols="50"></textarea>
+        </div>
+        <button id="downloadButton" class="button" style="width: 120px;">Download Notes</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
